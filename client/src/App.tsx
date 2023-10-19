@@ -26,6 +26,7 @@ import SuperAdminPage from "src/routes/admin/SuperAdmin";
 import BecomeMemberPage from "src/routes/becomeMember/BecomeMember";
 import BoardWebsiteListPage from "src/routes/boardWebsiteList/BoardWebsiteList";
 import DocumentsPage from "src/routes/documents/DocumentsPage";
+import InstrumentStatsPage from "src/routes/instrumentStats/InstrumentStatsPage"
 import FrontPage from "src/routes/frontPage/FrontPage";
 import HomePage from "src/routes/home/Home";
 import { LicenseOnlyPage, LicensePage } from "src/routes/license/LicensePage";
@@ -116,6 +117,7 @@ function App() {
 								<Route path="ny" element={<NewUserPage/>} />
 							</Route>
 						</Route>
+						<Route path="/instrument-statistikk" element={<InstrumentStatsPage />} />
 						<Route path="/arrangement" element={<EventContext />}>
 							<Route path="" element={<Navigate to="kommende" />} />
 							<Route path=':eventId' element={<EventItemContext />} /> 	{/* Will redirect to correct path */}
