@@ -9,4 +9,5 @@ export * from "./SheetArchiveSong.js"
 export * from "./SimpleText.js"
 export * from "./SongLyric.js"
 export * from "./User.js"
+export * from "./InstrumentStat.js"
 
