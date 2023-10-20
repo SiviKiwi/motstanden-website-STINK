@@ -117,7 +117,7 @@ function App() {
 								<Route path="ny" element={<NewUserPage/>} />
 							</Route>
 						</Route>
-						<Route path="/instrument-statistikk" element={<InstrumentStatsPage />} />
+						<Route path="/instrumentstatistikk" element={<InstrumentStatsPage />} />
 						<Route path="/arrangement" element={<EventContext />}>
 							<Route path="" element={<Navigate to="kommende" />} />
 							<Route path=':eventId' element={<EventItemContext />} /> 	{/* Will redirect to correct path */}
