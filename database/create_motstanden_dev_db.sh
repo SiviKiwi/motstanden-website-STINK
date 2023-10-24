@@ -63,6 +63,10 @@ sqlite3 motstanden_dev.db < migrations/motstanden_db/14_simple_text.sql;
 echo "Running: 15_vw_event_participant_refactor.sql"
 sqlite3 motstanden_dev.db < migrations/motstanden_db/15_vw_event_participant_refactor.sql;
 
+# Add instrument stats to db
+echo "Running: 16_instrument_stats.sql"
+sqlite3 motstanden_dev.db < migrations/motstanden_db/16_instrument_stats.sql;
+
 # Insert data that is representative for the current data in the database
 cd data/db
 sh motstanden-db-data.sh 
