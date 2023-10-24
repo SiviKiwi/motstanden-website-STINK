@@ -2,7 +2,7 @@ import Database from "better-sqlite3";
 import { InstrumentStat } from "common/interfaces"
 import { dbReadOnlyConfig, dbReadWriteConfig, motstandenDB } from "../config/databaseConfig.js";
 
-export function getStats(): InstrumentStat[] {
+export function getStats(limit?: number): InstrumentStat[] {
 
     const db = new Database(motstandenDB, dbReadOnlyConfig)
     const stmt = db.prepare(`
@@ -14,8 +14,9 @@ export function getStats(): InstrumentStat[] {
             stat_date as statDate
         FROM
             instrument_stats
-        ORDER BY stat_date DESC`)
-    const stats = stmt.all()
+        ORDER BY stat_date DESC
+        ${!!limit ? "LIMIT ?" : ""}`)
+    const stats = !!limit ? stmt.all(limit) : stmt.all()
     db.close()
     return stats as InstrumentStat[]
 }
