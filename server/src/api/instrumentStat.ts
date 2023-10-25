@@ -12,9 +12,7 @@ let router = express.Router()
 
 router.post("/instrument-stats/new", 
     (req: Request, res: Response) => {
-	console.log(req.body)
 	const stat: InstrumentStat = req.body
-	console.log(stat)
 	try {
 	    instrumentStatService.insertStat(req.body as InstrumentStat)
 	} catch(err) {

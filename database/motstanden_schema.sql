@@ -356,7 +356,7 @@ LEFT JOIN user USING(user_id)
 LEFT JOIN participation_status USING(participation_status_id)
 /* vw_event_participant(event_id,user_id,first_name,middle_name,last_name,full_name,profile_picture,status) */;
 CREATE TABLE instrument_stats (
-    instrument_id INTEGER PRIMARY KEY NOT NULL,
+    instrument_id INTEGER NOT NULL,
     instrument_name TEXT NOT NULL,
     loudness INTEGER NOT NULL,
     sourpercentage INTEGER NOT NULL,

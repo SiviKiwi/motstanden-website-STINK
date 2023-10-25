@@ -4,7 +4,7 @@ INSERT INTO version(migration) VALUES
 
 
 CREATE TABLE instrument_stats (
-    instrument_id INTEGER PRIMARY KEY NOT NULL,
+    instrument_id INTEGER NOT NULL,
     instrument_name TEXT NOT NULL,
     loudness INTEGER NOT NULL,
     sourpercentage INTEGER NOT NULL,
